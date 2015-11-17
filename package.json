@@ -1,0 +1,16 @@
+{
+  "name": "CegekaMusicStore",
+  "author": "churmuzache",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt-wiredep": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-html2js": "*",
+    "karma": "*",
+    "karma-jasmine": "*",
+    "karma-phantomjs-launcher": "*",
+    "grunt-http-server":"*"
+  }
+}

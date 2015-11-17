@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-app="cgkMusicStore">
+
+<div ng-cloak>
+    <div class="main" ui-view="music-store"></div>
+</div>
+
+
+<!--bower:js-->
+<script src="../lib/bower_components/jquery/dist/jquery.js"></script>
+<script src="../lib/bower_components/angular/angular.js"></script>
+<script src="../lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../lib/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<!--endbower-->
+
+<script src="app.module.js"></script>
+<script src="app.module.config.js"></script>
+<script src="./angular/controller/MusicStoreController.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../lib/bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./angular/index.css">
+
+</body>
+</html>
