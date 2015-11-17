@@ -2,24 +2,50 @@
     <div class="col-xs-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h2 class="panel-title">Music store</h2>
+                <h2 class="panel-title">Music Store</h2>
             </div>
             <div class="panel-body">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                        <th ng-repeat="header in headers">
-                            {{header.name}}
-                        </th>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
 
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label for="songTitle">Search song</label>
+                                <input type="text" ng-model="search.songName" class="form-control" id="songTitle" placeholder="song name">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <th ng-repeat="header in headers">
+                                    {{header.name}}
+                                </th>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="m in musicStore | orderBy:'-songName' | filter:search:strict" >
+                                    <td>
+                                        {{m.artistName}}
+                                    </td>
+                                    <td>
+                                        {{m.songName}}
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

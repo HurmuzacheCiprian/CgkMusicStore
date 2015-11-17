@@ -1,3 +1,7 @@
 .main {
     margin:15px;
 }
+
+.checkbox {
+    margin-top: 0px !important;
+}
