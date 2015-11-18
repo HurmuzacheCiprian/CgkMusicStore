@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <script src="../lib/bower_components/angular/angular.js"></script>
 </head>
 <body ng-app="cgkMusicStore">
 
 <div ng-cloak>
-    <div class="main" ui-view="music-store"></div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Music Store</h2>
+                </div>
+                <div class="main" ui-view="music-store"></div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 
 
