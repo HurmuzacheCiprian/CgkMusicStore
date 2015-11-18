@@ -16,31 +16,20 @@
             name: 'Add to favorites'
         }];
 
-        var allSongs = [
-            {
-                artistName: 'Beatles',
-                songName: 'Drive my car'
-            },
-            {
-                artistName: 'John Lennon',
-                songName: 'Imagine'
-            },
-            {
-                artistName: 'Coldplay',
-                songName: 'Fix you'
-            },
-            {
-                artistName: 'Rammstein',
-                songName: 'Amour'
-            }
-        ];
-
         $scope.headers = headers;
-        $scope.musicStore = allSongs;
+        $scope.musicStore = MusicStoreService.getAllSongs();
 
         $scope.addToFavorites = function(songName, artistName) {
             MusicStoreService.addToFavorites(songName, artistName);
+        };
 
+        $scope.removeFromFavorites = function(songName) {
+            MusicStoreService.removeFromFavorites(songName);
+
+        };
+
+        $scope.isAddedToFavorites = function(songName) {
+            return MusicStoreService.isAddedToFavorites(songName);
         };
 
     };

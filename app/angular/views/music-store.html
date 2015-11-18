@@ -27,11 +27,13 @@
                             {{m.songName}}
                         </td>
                         <td>
-                            <div class="checkbox">
+                            <div class="checkbox" ng-show="!(isAddedToFavorites(m.songName))">
                                 <label>
-                                    <input type="checkbox" ng-click="addToFavorites(m.songName, m.artistName)">
+                                    <input type="checkbox"  ng-click="addToFavorites(m.songName, m.artistName)">
+
                                 </label>
                             </div>
+                            <div style="cursor:pointer" class="glyphicon glyphicon-remove" ng-show="isAddedToFavorites(m.songName)" ng-click="removeFromFavorites(m.songName)"></div>
                         </td>
                     </tr>
                     </tbody>
