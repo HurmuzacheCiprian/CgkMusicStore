@@ -7,7 +7,7 @@
     var app = angular.module('cgkMusicStore');
 
 
-    var MusicStoreController = function ($scope) {
+    var MusicStoreController = function ($scope, MusicStoreService) {
         var headers = [{
             name: 'Artist name'
         }, {
@@ -16,7 +16,7 @@
             name: 'Add to favorites'
         }];
 
-        var musicStoreresponse = [
+        var allSongs = [
             {
                 artistName: 'Beatles',
                 songName: 'Drive my car'
@@ -36,9 +36,14 @@
         ];
 
         $scope.headers = headers;
-        $scope.musicStore = musicStoreresponse;
+        $scope.musicStore = allSongs;
+
+        $scope.addToFavorites = function(songName) {
+            console.log('Add to favorites '+songName);
+        };
+
     };
 
-    app.controller('MusicStoreController', ['$scope', MusicStoreController]);
+    app.controller('MusicStoreController', ['$scope','MusicStoreService', MusicStoreController]);
 
 })();
