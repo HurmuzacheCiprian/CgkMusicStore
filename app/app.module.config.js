@@ -23,6 +23,18 @@
 
                 }
             })
+            .state('liked-songs', {
+                url: '/liked-songs',
+                data: {
+                    roles: []
+                },
+                views: {
+                    'liked-songs': {
+                        templateUrl: 'angular/views/liked-songs.html',
+                        controller: 'LikedSongsController'
+                    }
+                }
+            })
 
     });
 

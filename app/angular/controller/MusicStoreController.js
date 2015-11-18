@@ -38,8 +38,9 @@
         $scope.headers = headers;
         $scope.musicStore = allSongs;
 
-        $scope.addToFavorites = function(songName) {
-            console.log('Add to favorites '+songName);
+        $scope.addToFavorites = function(songName, artistName) {
+            MusicStoreService.addToFavorites(songName, artistName);
+
         };
 
     };
